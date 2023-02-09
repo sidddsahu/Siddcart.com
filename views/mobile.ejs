@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>siddcart.com</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+  <link rel="shortcut icon" href="https://cutewallpaper.org/cdn-cgi/mirage/dd19f2d06ebc24f541f142b37b4289ffa7de722a7607e39984c5c6dd4ce8defd/1280/24/s-logo-png/s-icon-logo-transparent-png-download-s-logo-s-icon-png-png-download-transparent-png-image-pngitem.png" type="image/png">
+</head>
+<body>
+  
+<%- include('header')%>
+<%- include('nav')%>
+
+
+<div
+div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://img.freepik.com/free-photo/3d-illustration-smartphone-with-products-coming-out-screen-online-shopping-e-commerce-concept_58466-14529.jpg?w=1060&t=st=1674471863~exp=1674472463~hmac=b72285a053753ca86c16bc9aa0dc31f8d201cd1c44e7643c83fccd7eb7e3aaca" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img.freepik.com/premium-vector/online-shopping-concept-digital-marketing-website-mobile-application_43880-342.jpg?w=1380" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img.freepik.com/premium-vector/online-shopping-concept-digital-marketing-website-mobile-application_43880-332.jpg?w=1380" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img.freepik.com/free-vector/big-sale-composition-with-people-shopping-fashion-store-vector-illustration_1284-77581.jpg?w=1380&t=st=1674472216~exp=1674472816~hmac=1bdd9624411c09a2e79aa3834cc837317ab306db02f647084fc23d1955c7c75e" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://as1.ftcdn.net/v2/jpg/01/21/85/42/1000_F_121854204_KW4GVjxCj0RecPZgFPNEhsLSZ9J9LfVW.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="https://as2.ftcdn.net/v2/jpg/03/20/68/71/1000_F_320687108_3UZ13l44Ob5cel208W7DaRnD5BR9DfY7.jpg" alt="">
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+</div>
+
+<div style=" padding-left: 6vmax; background-color: #DD4124; width: 100%; display: flex; flex-wrap: wrap; padding-top: 2vmin;">
+<% card.forEach((card) =>{ %>
+  <div  class="card" style=" width: 17rem; margin-bottom: 1vmax; margin-left: 3vmax; border-radius: 10px;  box-shadow: 2px 2px 2px black; ">
+    <a class="position-absolute h-100 w-100" href="/updated/<%= card._id%>"></a>
+    <img style="object-fit : cover; border-radius: 10px" class="object-fit-cover image" height="290px" 
+    src="/uploads/<%= card.image%>" class="card-img-top " alt="...">
+    <div style="border-top: 2px solid red;" class="card-body">
+      <div style="display: flex;">
+        <p style="text-decoration: line-through; margin-right: 1vmax;"><%= card.discount%></p>
+        <p style="margin: 0; padding: 0;" class="text-danger fw-bold" ><%= card.title%></p>
+      </div>
+      <p style="font: 300 1rem 'robotob'; margin: 0; padding: 0;"><%= card.desc%></p>
+    </div>
+  </a>
+  </div>
+<% })%>
+</div>  
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="/javascripts/script.js"></script>
+</body>
+</html>

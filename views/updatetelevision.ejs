@@ -1,0 +1,90 @@
+<%- include('header')%>
+<div
+  style="
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 197, 163);">
+
+  <div
+    class="card"
+    style="
+      width: 50rem;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;">
+
+
+    <a style="
+        margin-left: 90%;
+        text-decoration: none;
+        background-color: bisque;
+        border-radius: 50%;
+        padding: 0.3vmax;
+        margin-top: 1vmax; " 
+        href="/television">❌</a>
+
+    <img
+      style="object-fit: cover; width: 20vw; height: 50vh"
+      class="object-fit-cover image"
+      height="290px"
+      src="/uploads/<%= card.image%>"
+      class="card-img-top"
+    />
+
+    <div class="card-body text-center w-50">
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-left: 3vmax;
+        "
+        action="/updatetelevision/<%= card._id%>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+
+
+      <input
+        style="border: none; outline: none; font: 500 1rem roboto"
+        type="text"
+        name="discount"
+        value="<%= card.dicount%>"
+      />
+
+        <input
+          style="border: none; outline: none; font: 500 1rem roboto"
+          type="text"
+          name="title"
+          value="<%= card.title%>"
+        />
+
+        <textarea
+          style="border: none; outline: none; font: 500 1rem roboto"
+          name="desc"
+        ><%= card.desc%></textarea
+        >
+
+    <input class="py-2 px-2  rounded border border-dark mb-4" type="file" name="gallery" placeholder="file here">
+
+        <input type="hidden" name="oldgallery" value="<%= card.image%>" />
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            width: 10vw;
+            padding: 0vmax;
+            margin-right: 76vmax;">
+          <button class="btn btn-success m-auto">Update</button>
+          <a href="/tvdeletings/<%= card._id%>" class="btn btn-danger m-auto">Delete</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('footer')%>

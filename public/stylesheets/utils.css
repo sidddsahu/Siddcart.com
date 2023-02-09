@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+.container-father{
+  height: 100vh;
+  width: 100vw;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container form h1 span{
+  color: darkorange;
+}
+
+.container {
+    margin-top: 3vmax;
+    padding: 3vmax;
+    height: 85vh;
+    width: 60vw !important;
+    margin: auto;
+    background-color: #0000;
+    color: #ffff;
+  }
+  
+  .container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container form input {
+    padding: 0.6vmax 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  
+  .container form label {
+    margin-top: 1vmax;
+    margin-bottom: .2vmax;
+    font: 400 1.2rem "roboto";
+  }
+  
+  .container form h1 {
+    font: 500 2rem "pacifico";
+  }
+  
+  .container form button {
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: 3vmax;
+    font: 400 1rem "roboto";
+    border: none;
+    color: #ffff;
+    background-color: dodgerblue;
+  }
+  
+  .container form a {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 100px;
+    margin-top: 3vmax;
+    font: bold;
+    padding-top: 0.5vmax;
+    background-color: black;
+    color: #ffff;
+    text-decoration: none;
+    margin-left: 1vmax;
+    height: 40px;
+  }
+  
+  .container form .btn {
+    display: flex;
+    align-items: center;
+  }
+  

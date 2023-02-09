@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>siddcart.com</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="shortcut icon" href="https://cutewallpaper.org/cdn-cgi/mirage/dd19f2d06ebc24f541f142b37b4289ffa7de722a7607e39984c5c6dd4ce8defd/1280/24/s-logo-png/s-icon-logo-transparent-png-download-s-logo-s-icon-png-png-download-transparent-png-image-pngitem.png" type="image/png">
+</head>
+<body>
+  
+<%- include('header')%>
+<%- include('nav')%>
+<div style=" padding-left: 6vmax; width: 100%; display: flex; flex-wrap: wrap; padding-top: 2vmin; background: linear-gradient( #fceed1, #7d3cff,#f2d53c,#a82d31);">
+<% card.forEach((card) =>{ %>
+  <div  class="card" style=" width: 17rem; margin-bottom: 1vmax; margin-left: 3vmax; border-radius: 10px;  box-shadow: 2px 2px 2px rgb(151, 150, 150);  ">
+    <a class="position-absolute h-100 w-100" href="/updating/<%= card._id%>"></a>
+    <img style="object-fit : cover; border-radius: 10px" class="object-fit-cover image" height="290px" 
+    src="/uploads/<%= card.image%>" class="card-img-top " alt="...">
+    <div style="border-top: 2px solid red;" class="card-body">
+      <div style="display: flex;">
+        <p style="text-decoration: line-through; margin-right: 1vmax;"><%= card.discount%></p>
+        <p style="margin: 0; padding: 0;" class="text-danger fw-bold" ><%= card.title%></p>
+      </div>
+      <p style="font: 300 1rem 'robotob'; margin: 0; padding: 0;"><%= card.desc%></p>
+    </div>
+  </a>
+  </div>
+<% })%>
+</div>  
+</body>
+</html>

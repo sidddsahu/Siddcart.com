@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/forget.css">
+</head>
+<body>
+<div class="small-container">
+    <% card.forEach((card)=>{ %>
+    <div class="left">
+        <img
+      style="object-fit: cover; width: 20vw; height: 50vh"
+      class="object-fit-cover image"
+      height="290px"
+      src="/uploads/<%= card.image%>"
+      class="card-img-top"
+    />
+    </div>
+    <div class="right">
+        <p style="text-decoration: line-through; margin-right: 1vmax;">
+            <%= card.discount%>
+          </p>
+          <p><%= card.title%></p>
+    </div>
+    <% })%>
+</div>
+</body>
+</html>
