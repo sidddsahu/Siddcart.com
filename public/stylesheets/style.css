@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+.container-father{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+}
+
+.container {
+  /* margin-top: 3vmax; */
+  padding: 2vmax;
+  height: 95vh;
+  width: 30vw !important;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 2px rgb(184, 184, 184);
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form h1 span{
+  color: red;
+}
+
+.container form input {
+  padding: 0.4vmax 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.container form label {
+  margin-top: 1.5vmax;
+  font: 400 1.2rem "roboto";
+}
+
+.container form h1 {
+  font: 500 2rem "pacifico";
+}
+
+.container form button {
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 1vmax;
+  font: 400 1rem "roboto";
+  border: none;
+  color: #ffff;
+  background-color: dodgerblue;
+}
+
+
+.container form .login {
+  margin-top: 1vmax;
+  text-align: center;
+  font: 400 1.1rem "roboto" ;
+  color: black;
+  text-decoration: none;
+} 
+
+.container form .delete{
+  margin-top: 1vmax;
+  font: 400 1.1rem "roboto";
+  color: red;
+  margin-left: 1vmax;
+  text-decoration: none;
+}
+
+.container form .btn {
+  display: flex;
+  align-items: center;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.page h1 {
+  font: 500 2.5rem "leiko";
+  margin-bottom: 1vmax;
+}
+
+.page form {
+  height: 60vh;
+  width: 50vw;
+  padding: 20px;
+  box-shadow: 2px 4px 4px 4px rgb(129, 129, 129);
+  display: flex;
+  flex-direction: column;
+}
+
+.page form input {
+  padding: 0.5vmax 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.page form label {
+  margin-left: 10px;
+  margin-top: 1.5vmax;
+  margin-bottom: .2vmax;
+  font: 400 1.1rem roboto;
+}
+
+.page form .btn{
+  display: flex;
+}
+
+.page form button {
+  height: 30px;
+  width: 100px;
+  margin-top: 2vmax;
+  border-radius: 25px;
+  color: #ffff;
+  border: none;
+  background-color: blueviolet;
+}
+
+.page form a {
+  height: 30px;
+  width: 100px;
+  margin-top: 2vmax;
+  border-radius: 25px;
+  margin-left: 2vmax;
+  padding-top: 0.3vmax;
+  color: #ffff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background-color: red;
+}
+
+/* ------------------------------------Page1-Index.js---------------------------------------------- */
+.page1 {
+  height: 20vh;
+  width: 100vw;
+  margin-bottom: 2vmax;
+  box-shadow: 2px 2px 2px 3px rgb(240, 236, 236);
+  /* background-image: url(https://w0.peakpx.com/wallpaper/190/785/HD-wallpaper-colours-mix-blue-colous-happy-light-yellow.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background-color: #ffb766;
+}
+
+.page1-main {
+  display: flex;
+  align-items: center;
+  height: 20vh;
+  width: 90vw;
+  padding: 3vmax;
+  /* background-color: cadetblue; */
+  margin: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s ease;
+  box-shadow: 2px 2px 10px 10px rgb(151, 150, 150);
+}
+
+.page1-main-box {
+  margin-right: 2.2vmax;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  /* box-shadow: 2px 2px 2px 3px rgb(240, 236, 236); */
+  border: 2px solid aqua;
+  border-radius: 20%;
+}
+
+.page1-main-box {
+  position: relative;
+  height: 110px;
+  width: 110px;
+}
+
+.page1-main-box img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.page1-main-box img:hover {
+  transform: scale(1.05);
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 50vh !important;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

@@ -1,0 +1,15 @@
+
+
+
+<div style="height: 100vh; width: 100vw; background-color: darkseagreen; padding-top: 10vh;">
+    <a href="/"><img height="50px" src="/images/icons8-double-left.gif" alt=""></a>
+    <%- include('header')%>
+    <form class="d-flex w-75 flex-column w-50 m-auto py-4 shadow-lg mb2 px-4" action="/adding" method="post" enctype="multipart/form-data">
+        <h1><span class="text-white">Add</span> Mobiles ➕</h1>
+        <input class="py-2 px-2 rounded border border-dark mb-4 disabled"  type="text" name="title" placeholder="Price...">
+        <textarea style="margin-bottom: 1vmax;" name="desc" placeholder="Description..." ></textarea>
+        <input class="py-2 px-2  rounded border border-dark mb-4" type="file" name="gallery" placeholder="file here">
+        <button class="rounded m-auto px-4 py-2 btn btn-danger">Add items</button>
+    </form>
+    
+    </div>

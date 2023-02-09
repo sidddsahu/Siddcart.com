@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container-father">
+    <div class="container">
+    <form action="/account" method="post">
+        <h1> <span>Account</span> Information</h1>
+        <label for="">Name</label>
+        <input style="border: none; outline: none; background: none; color: rgb(163, 163, 163); font: 400 1.2rem 'roboto';" type="text" placeholder="Name..." name="name" value="<%= user.name%>">
+
+        <label for="">Username</label>
+        <input style="border: none; outline: none; background: none; color: rgb(163, 163, 163); font: 400 1.2rem 'roboto'; " type="text" placeholder="Username..." name="username" value="<%= user.username%>">
+
+        <label for="">E-mail</label>
+        <input style="border: none; outline: none; background: none; color: rgb(163, 163, 163); font: 400 1.2rem 'roboto';" type="email" placeholder="E-mail..." name="email" value="<%= user.email%>">
+               
+        <label for="">Contact</label>
+        <input style="border: none; outline: none; background: none; color: rgb(163, 163, 163); font: 400 1.2rem 'roboto';" type="number" placeholder="Contact..." name="phone" value="<%= user.phone%>">
+        <!-- <div style="display: flex; align-items: center; margin-top: 2vmax; margin-bottom: 1vmax;"> -->
+        <a  style="width: 10vw; background: none; color: rgb(65, 0, 126); margin-top: 1vmax;  font: 400 1.1rem 'roboto';" href="/reset">Reset password</a>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 1vmax; margin-top: 1vmax;">
+            <a class="login" href="/login">Signout</a>
+            <a style=" font: 400 1rem 'roboto'; color: rgb(169, 169, 169); " href=""><%= user.email%></a>
+
+        </div>
+    <!-- </div> -->
+
+        <div class="btn">
+            <button>Save information</button>
+            <a class="delete" href="/delete">Delete Account</a>
+    </div>
+    </form>
+</div>
+<hr>
+</div>
+
+</body>
+</html>
